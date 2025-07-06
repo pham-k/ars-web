@@ -1,0 +1,21 @@
+@use "../core/color";
+@use "../core/spacing";
+
+.left-drawer {
+  width: 0;
+  position: fixed;
+  top: 68px;
+  left: -1rem;
+  height: calc(100vh - 68px - 40px - 0.5rem - 2px);
+  z-index: 1;
+  //bottom: calc(100vh - 0.5rem);
+  overflow-x: hidden;
+  transition: 0.5s;
+  border: solid 1px color.$dark;
+  border-radius: 0.5rem;
+
+  &.is-open {
+    width: clamp(240px, 100vw, 300px);
+    left: 0.5rem;
+  }
+}

@@ -1,0 +1,57 @@
+@use "../core/color";
+@use 'sass:color' as sc;
+
+.menu {
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: color.$light;
+  box-sizing: border-box;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  li,
+  .menu-item {
+    margin-bottom: 0.25rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    text-align: left;
+
+    &:hover {
+      background-color: color.$darker;
+    }
+
+    &:active {
+      background-color: color.$darker;
+    }
+
+    // Modifiers
+    &.is-active,
+    &.is-selected {
+      background-color: color.$darker;
+    }
+  }
+}
+
+.menu-label {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+
+  &:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}

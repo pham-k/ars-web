@@ -1,0 +1,19 @@
+@use '../core/color';
+@use '../core/typography';
+@use '../core/spacing';
+
+.chip {
+  margin: 0;
+  font-size: 0.75rem;
+  color: color.$dark;
+  letter-spacing: 1px;
+  border: solid 1px color.$dark;
+  border-radius: 0.5rem;
+  padding: 0.11rem 0.5rem;
+
+  &.is-disabled {
+    color: color.$grey;
+    border: solid 1px color.$grey;
+  }
+}
+

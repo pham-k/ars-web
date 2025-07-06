@@ -1,0 +1,23 @@
+@use '../core/color';
+@use '../core/spacing';
+
+.top-menu {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: solid 1px color.$dark;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: color.$light;
+}
+
+.top-menu button {
+  display: flex;
+  align-items: center;
+}

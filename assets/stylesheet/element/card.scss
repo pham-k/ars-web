@@ -1,0 +1,10 @@
+@use '../core/color';
+@use '../core/typography';
+@use '../core/spacing';
+
+.card {
+  border: solid 1px color.$dark;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: color.$white;
+}

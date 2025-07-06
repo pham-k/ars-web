@@ -1,0 +1,36 @@
+@use 'sass:color' as sc;
+
+:root {
+  // Palette
+  --blue: #004488;
+  --red: #BB5566;
+  --green: #44AA99;
+  --yellow: #EECC66;
+  --black: #404040;
+  --white: #F0F0F0;
+  --grey: #A0A0A0;
+
+  // Semantic
+  --color-dark: var(--black);
+  --color-light: var(--white);
+  --color-darker: sc.adjust(var(--color-bg), $lightness: -10%);
+  --color-primary: var(--blue);
+}
+
+
+// Palette
+$blue: #004488;
+$red: #BB5566;
+$green: #44AA99;
+$yellow: #EECC66;
+$black: #404040;
+$white: #F0F0F0;
+$grey: #A0A0A0;
+
+// Semantic
+$dark: $black;
+$light: $white;
+$darker: sc.adjust($light, $lightness: -10%);;
+$primary: $blue;
+$primary-lighter: sc.adjust($primary, $lightness: 10%);
+$primary-darker: sc.adjust($primary, $lightness: -10%);

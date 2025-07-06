@@ -7,20 +7,19 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "build-bulma": "sass --load-path=node_modules assets/stylesheet/bulma/bulma.scss assets/stylesheet/bulma/bulma.css",
+    "watch-bulma": "npm run build-bulma -- --watch",
+    "build-css": "sass assets/stylesheet/index.scss assets/stylesheet/index.css",
+    "watch-css": "sass --watch assets/stylesheet/index.scss assets/stylesheet/index.css"
   },
   "dependencies": {
-    "@primeuix/themes": "^1.0.1",
-    "@primevue/forms": "^4.3.2",
+    "@nuxt/icon": "^1.14.0",
     "@tailwindcss/vite": "^4.0.9",
-    "cally": "^0.8.0",
+    "bulma": "^1.0.4",
     "nuxt": "^3.15.4",
-    "primevue": "^4.3.3",
-    "tailwindcss": "^4.0.9",
+    "sass": "^1.89.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
-  },
-  "devDependencies": {
-    "@primevue/nuxt-module": "^4.3.3"
   }
 }

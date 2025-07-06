@@ -1,0 +1,32 @@
+@use 'color';
+@use 'animation';
+
+@mixin center($width, $height: 0) {
+  position: absolute;
+  @if $height != 0 {
+    left: calc(50% - (#{$width} * 0.5));
+    top: calc(50% - (#{$height} * 0.5));
+  } @else {
+    left: calc(50% - (#{$width} * 0.5));
+    top: calc(50% - (#{$width} * 0.5));
+  }
+}
+
+@mixin block($spacing: 0.5rem) {
+  &:not(:last-child) {
+    margin-bottom: $spacing;
+  }
+}
+
+@mixin loader($color) {
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid $color;
+  border-radius: 1rem;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  position: relative;
+}
